@@ -7,8 +7,6 @@ import HomeBanner from "@/components/HomeBanner";
 // import ShopByBrands from "@/components/ShopByBrands";
 // import { getCategories } from "@/sanity/queries";
 
-import React from "react";
-
 const Home = async () => {
   //   const categories = await getCategories(6);
 

@@ -1,23 +1,22 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
-import React from "react";
 
-interface ContactItemData {
+type ContactItemData = {
   title: string;
   subtitle: string;
   icon: React.ReactNode;
-}
+};
 
 const data: ContactItemData[] = [
   {
     title: "Visit Us",
-    subtitle: "New York, USA",
+    subtitle: "Cairo, Egypt",
     icon: (
       <MapPin className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
     ),
   },
   {
     title: "Call Us",
-    subtitle: "+12 958 648 597",
+    subtitle: "+20 111 418 1442",
     icon: (
       <Phone className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
     ),
@@ -31,7 +30,7 @@ const data: ContactItemData[] = [
   },
   {
     title: "Email Us",
-    subtitle: "Shopcart@gmail.com",
+    subtitle: "shopi-cart@gmail.com",
     icon: (
       <Mail className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
     ),

@@ -1,20 +1,20 @@
 import { Category } from "@/sanity.types";
-import React from "react";
-import Title from "../Title";
+
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
+import { Title } from "@/components/ui/text";
 
-interface Props {
+type CategoryListProps = {
   categories: Category[];
   selectedCategory?: string | null;
   setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
-}
+};
 
 const CategoryList = ({
   categories,
   selectedCategory,
   setSelectedCategory,
-}: Props) => {
+}: CategoryListProps) => {
   return (
     <div className="w-full bg-white p-5">
       <Title className="text-base font-black">Product Categories</Title>
@@ -34,7 +34,11 @@ const CategoryList = ({
             />
             <Label
               htmlFor={category?.slug?.current}
-              className={`${selectedCategory === category?.slug?.current ? "font-semibold text-shop_dark_green" : "font-normal"}`}
+              className={`${
+                selectedCategory === category?.slug?.current
+                  ? "font-semibold text-shop_dark_green"
+                  : "font-normal"
+              }`}
             >
               {category?.title}
             </Label>

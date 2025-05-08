@@ -9,10 +9,13 @@ export function useOutsideClick<T extends HTMLElement>(callback: () => void) {
         callback();
       }
     };
+
     document.addEventListener("mousedown", handleClickedOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickedOutside);
     };
   }, [callback]);
+
   return ref;
 }

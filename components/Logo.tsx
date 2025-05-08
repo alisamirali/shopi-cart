@@ -9,23 +9,22 @@ const Logo = ({
   spanDesign?: string;
 }) => {
   return (
-    <Link href="/" className="inline-flex">
-      <h2
+    <Link
+      href="/"
+      className={cn(
+        "text-xl md:text-2xl text-shop_dark_green font-black tracking-wider uppercase hover:text-shop_light_green hoverEffect group font-sans inline-flex",
+        className
+      )}
+    >
+      Shopi
+      <span
         className={cn(
-          "text-2xl text-shop_dark_green font-black tracking-wider uppercase hover:text-shop_light_green hoverEffect group font-sans",
-          className
+          "text-shop_light_green group-hover:text-shop_dark_green hoverEffect",
+          spanDesign
         )}
       >
-        Shopi
-        <span
-          className={cn(
-            "text-shop_light_green group-hover:text-shop_dark_green hoverEffect",
-            spanDesign
-          )}
-        >
-          Cart
-        </span>
-      </h2>
+        Cart
+      </span>
     </Link>
   );
 };

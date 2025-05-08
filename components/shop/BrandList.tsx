@@ -1,16 +1,20 @@
 import { BRANDS_QUERYResult } from "@/sanity.types";
-import React from "react";
-import Title from "../Title";
+
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
+import { Title } from "@/components/ui/text";
 
-interface Props {
+type BrandListProps = {
   brands: BRANDS_QUERYResult;
   selectedBrand?: string | null;
   setSelectedBrand: React.Dispatch<React.SetStateAction<string | null>>;
-}
+};
 
-const BrandList = ({ brands, selectedBrand, setSelectedBrand }: Props) => {
+const BrandList = ({
+  brands,
+  selectedBrand,
+  setSelectedBrand,
+}: BrandListProps) => {
   return (
     <div className="w-full bg-white p-5">
       <Title className="text-base font-black">Brands</Title>
@@ -28,7 +32,11 @@ const BrandList = ({ brands, selectedBrand, setSelectedBrand }: Props) => {
             />
             <Label
               htmlFor={brand?.slug?.current}
-              className={`${selectedBrand === brand?.slug?.current ? "font-semibold text-shop_dark_green" : "font-normal"}`}
+              className={`${
+                selectedBrand === brand?.slug?.current
+                  ? "font-semibold text-shop_dark_green"
+                  : "font-normal"
+              }`}
             >
               {brand?.title}
             </Label>

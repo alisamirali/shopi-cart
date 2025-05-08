@@ -1,7 +1,6 @@
-import React from "react";
-import Title from "../Title";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Label } from "../ui/label";
+import { Title } from "@/components/ui/text";
 
 const priceArray = [
   { title: "Under $100", value: "0-100" },
@@ -11,11 +10,12 @@ const priceArray = [
   { title: "Over $500", value: "500-10000" },
 ];
 
-interface Props {
+type PriceListProps = {
   selectedPrice?: string | null;
   setSelectedPrice: React.Dispatch<React.SetStateAction<string | null>>;
-}
-const PriceList = ({ selectedPrice, setSelectedPrice }: Props) => {
+};
+
+const PriceList = ({ selectedPrice, setSelectedPrice }: PriceListProps) => {
   return (
     <div className="w-full bg-white p-5">
       <Title className="text-base font-black">Price</Title>
@@ -33,7 +33,11 @@ const PriceList = ({ selectedPrice, setSelectedPrice }: Props) => {
             />
             <Label
               htmlFor={price.value}
-              className={`${selectedPrice === price?.value ? "font-semibold text-shop_dark_green" : "font-normal"}`}
+              className={`${
+                selectedPrice === price?.value
+                  ? "font-semibold text-shop_dark_green"
+                  : "font-normal"
+              }`}
             >
               {price?.title}
             </Label>
