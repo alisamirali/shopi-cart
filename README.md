@@ -96,3 +96,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 - [Next.js](https://nextjs.org)
 - [Sanity CMS](https://www.sanity.io)
 - [Vercel](https://vercel.com)
+
+![screencapture-shopi-cart-vercel-app-2025-05-08-17_27_36](https://github.com/user-attachments/assets/6dd96243-980b-4323-a476-51cdbc2fea8d)
