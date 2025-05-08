@@ -23,7 +23,7 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import useStore from "@/store";
 import { useAuth } from "@clerk/nextjs";
-import { ShoppingBag, Trash } from "lucide-react";
+import { Trash } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -102,10 +102,8 @@ const CartPage = () => {
         <Container>
           {groupedItems?.length ? (
             <>
-              <div className="flex items-center gap-2 py-5">
-                <ShoppingBag className="text-darkColor" />
-                <Title>Shopping Cart</Title>
-              </div>
+              <Title className="py-5">Shopping Cart</Title>
+
               <div className="grid lg:grid-cols-3 md:gap-8">
                 <div className="lg:col-span-2 rounded-lg">
                   <div className="border bg-white rounded-md">
@@ -114,7 +112,7 @@ const CartPage = () => {
                       return (
                         <div
                           key={product?._id}
-                          className="border-b p-2.5 last:border-b-0 flex items-center justify-between gap-5"
+                          className="border-b p-2.5 last:border-b-0 flex items-center justify-between gap-5 md:flex-row flex-col"
                         >
                           <div className="flex flex-1 items-start gap-2 h-36 md:h-44">
                             {product?.images && (
@@ -135,23 +133,32 @@ const CartPage = () => {
                             )}
                             <div className="h-full flex flex-1 flex-col justify-between py-1">
                               <div className="flex flex-col gap-0.5 md:gap-1.5">
-                                <h2 className="text-base font-semibold line-clamp-1">
+                                <h2
+                                  className="text-base font-semibold line-clamp-1"
+                                  title={product?.name}
+                                >
                                   {product?.name}
                                 </h2>
                                 <p className="text-sm capitalize">
                                   Variant:{" "}
-                                  <span className="font-semibold">
+                                  <span
+                                    className="font-semibold"
+                                    title={product?.variant}
+                                  >
                                     {product?.variant}
                                   </span>
                                 </p>
                                 <p className="text-sm capitalize">
                                   Status:{" "}
-                                  <span className="font-semibold">
+                                  <span
+                                    className="font-semibold"
+                                    title={product?.status}
+                                  >
                                     {product?.status}
                                   </span>
                                 </p>
                               </div>
-                              <div className="flex items-center gap-2">
+                              <div className="flex items-center gap-2 mt-4 md:mt-0">
                                 <TooltipProvider>
                                   <Tooltip>
                                     <TooltipTrigger>
@@ -184,7 +191,7 @@ const CartPage = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="flex flex-col items-start justify-between h-36 md:h-44 p-0.5 md:p-1">
+                          <div className="flex flex-row md:flex-col items-start justify-between w-full md:w-fit p-0.5 md:p-1  h-fit md:h-44">
                             <PriceFormatter
                               amount={(product?.price as number) * itemCount}
                               className="font-bold text-lg"
@@ -274,9 +281,9 @@ const CartPage = () => {
                                 </div>
                               ))}
                             </RadioGroup>
-                            <Button variant="outline" className="w-full mt-4">
+                            {/* <Button variant="outline" className="w-full mt-4">
                               Add New Address
-                            </Button>
+                            </Button> */}
                           </CardContent>
                         </Card>
                       </div>

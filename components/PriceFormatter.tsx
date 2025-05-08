@@ -9,8 +9,9 @@ const PriceFormatter = ({ amount, className }: Props) => {
   const formattedPrice = new Number(amount).toLocaleString("en-US", {
     currency: "USD",
     style: "currency",
-    minimumFractionDigits: 2,
+    minimumFractionDigits: 0,
   });
+
   return (
     <span
       className={twMerge("text-sm font-semibold text-darkColor", className)}

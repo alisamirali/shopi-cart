@@ -47,14 +47,14 @@ const ImageView = ({ images = [], isStock }: Props) => {
               width={700}
               height={700}
               priority
-              className={`w-full h-96 max-h-[550px] min-h-[500px] object-contain group-hover:scale-110 hoverEffect rounded-md ${
+              className={`w-full h-96 max-h-[550px] min-h-[500px] object-contain group-hover:scale-110 hoverEffect rounded-md flex-shrink-0 ${
                 isStock === 0 ? "opacity-50" : ""
               }`}
             />
           )}
         </motion.div>
       </AnimatePresence>
-      <div className="grid grid-cols-6 gap-2 h-20 md:h-24">
+      <div className="flex items-center gap-3 overscroll-x-auto">
         {images?.map((image) => (
           <button
             key={image?._key}
@@ -64,9 +64,9 @@ const ImageView = ({ images = [], isStock }: Props) => {
             <Image
               src={urlFor(image).url()}
               alt={`Thumbnail ${image._key}`}
-              width={100}
-              height={100}
-              className="w-full h-auto object-contain"
+              width={50}
+              height={50}
+              className="size-15 md:size-22 object-contain flex-shrink-0"
             />
           </button>
         ))}

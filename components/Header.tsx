@@ -1,16 +1,12 @@
 import Container from "./Container";
 import Logo from "./Logo";
 import CartIcon from "./CartIcon";
-// import { auth, currentUser } from "@clerk/nextjs/server";
-// import { ClerkLoaded, SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { Logs } from "lucide-react";
-// import { getMyOrders } from "@/sanity/queries";
 import HeaderMenu from "@/components/HeaderMenu";
 import FavoriteButton from "@/components/FavoriteButton";
 import SignIn from "@/components/SingIn";
 import MobileMenu from "@/components/MobileMenu";
-import SearchBar from "@/components/SearchBar";
 import { ClerkLoaded, SignedIn, UserButton } from "@clerk/nextjs";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { getMyOrders } from "@/sanity/queries";
@@ -35,7 +31,6 @@ const Header = async () => {
         <HeaderMenu />
 
         <div className="w-auto md:w-1/3 flex items-center justify-end gap-5">
-          <SearchBar />
           <CartIcon />
           <FavoriteButton />
 

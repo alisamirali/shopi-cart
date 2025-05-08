@@ -34,7 +34,7 @@ const WishListProducts = () => {
     <Container>
       {favoriteProduct?.length > 0 ? (
         <>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto scrollbar-hide">
             <table className="w-full border-collapse">
               <thead className="border-b">
                 <tr className="bg-black/5">
@@ -65,7 +65,7 @@ const WishListProducts = () => {
                         {product?.images && (
                           <Link
                             href={`/product/${product?.slug?.current}`}
-                            className="border rounded-md group hidden md:inline-flex"
+                            className="border rounded-md group flex-shrink-0"
                           >
                             <Image
                               src={urlFor(product?.images[0]).url()}
@@ -76,7 +76,11 @@ const WishListProducts = () => {
                             />
                           </Link>
                         )}
-                        <p className="line-clamp-1" title={product?.name}>
+
+                        <p
+                          className="line-clamp-1 hidden md:inline-flex"
+                          title={product?.name}
+                        >
                           {product?.name}
                         </p>
                       </td>

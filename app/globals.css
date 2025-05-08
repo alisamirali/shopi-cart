@@ -150,3 +150,9 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+@layer utilities {
+  .h-dvh {
+    height: 100dvh;
+  }
+}

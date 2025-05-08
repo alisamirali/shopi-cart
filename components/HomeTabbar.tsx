@@ -10,7 +10,7 @@ interface Props {
 const HomeTabbar = ({ selectedTab, onTabSelect }: Props) => {
   return (
     <div className="flex items-center flex-wrap gap-5 justify-between">
-      <div className="flex items-center gap-1.5 text-sm font-semibold">
+      <div className="flex items-center gap-1.5 text-sm font-semibold overflow-x-auto scrollbar-hide">
         <div className="flex items-center gap-1.5 md:gap-3">
           {productType?.map((item) => (
             <button
@@ -23,12 +23,14 @@ const HomeTabbar = ({ selectedTab, onTabSelect }: Props) => {
           ))}
         </div>
       </div>
-      <Link
-        href={"/shop"}
-        className="border border-darkColor px-4 py-1 rounded-full hover:bg-shop_light_green hover:text-white hover:border-shop_light_green hoverEffect"
-      >
-        See all
-      </Link>
+      <div className="flex items-center justify-end w-full md:w-fit">
+        <Link
+          href="/shop"
+          className="px-4 py-1 hover:text-shop_light_green hover:underline"
+        >
+          View All
+        </Link>
+      </div>
     </div>
   );
 };
