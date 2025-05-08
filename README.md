@@ -1,8 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shopi-Cart
+
+Shopi-Cart is an e-commerce platform built with Next.js, designed to provide a seamless shopping experience. This project includes features like product browsing, cart management, wishlist functionality, and more.
+
+## Features
+
+- **Product Management**: Browse products by category, brand, and price.
+- **Cart and Wishlist**: Add products to the cart or wishlist for later purchase.
+- **Order Management**: View and manage orders.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Sanity Integration**: Content management powered by Sanity CMS.
+
+## Project Structure
+
+The project is organized as follows:
+
+```
+app/                # Application pages and layouts
+components/         # Reusable UI components
+constants/          # Static data and constants
+hooks/              # Custom React hooks
+images/             # Static images
+lib/                # Utility functions and libraries
+sanity/             # Sanity CMS configuration and schemas
+store.ts            # Global state management
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v16 or later)
+- npm, yarn, pnpm, or bun (package managers)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/alisamirali/shopi-cart.git
+   cd shopi-cart
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+3. Set up environment variables:
+   Create a `.env` file in the root directory and add the required environment variables. Refer to `sanity/env.ts` for guidance.
+
+### Running the Development Server
+
+Start the development server:
 
 ```bash
 npm run dev
@@ -14,23 +72,27 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deploy the application using platforms like [Vercel](https://vercel.com). Refer to the Next.js [deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! Please follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push the branch.
+4. Open a pull request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Acknowledgments
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js](https://nextjs.org)
+- [Sanity CMS](https://www.sanity.io)
+- [Vercel](https://vercel.com)
