@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { StarIcon } from "@sanity/icons";
 import { Flame } from "lucide-react";
-import { Title } from "@/components/ui/text";
 import PriceView from "@/components/PriceView";
 import ProductSideMenu from "@/components/ProductSideMenu";
 import AddToCartButton from "@/components/AddToCartButton";
+import { Title } from "@/components/ui/text";
 
 const ProductCard = ({ product }: { product: any }) => {
   return (
@@ -51,7 +51,7 @@ const ProductCard = ({ product }: { product: any }) => {
             {product.categories.map((cat: any) => cat).join(", ")}
           </p>
         )}
-        <Title className="text-sm line-clamp-1">{product?.name}</Title>
+        <Title className="text-base line-clamp-1">{product?.name}</Title>
         <div className="flex items-center gap-2">
           <div className="flex items-center">
             {[...Array(5)].map((_, index) => (
