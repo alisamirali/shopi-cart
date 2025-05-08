@@ -3,8 +3,8 @@ export const headerData = [
   { title: "Shop", href: "/shop" },
   { title: "Blog", href: "/blog" },
   { title: "Hot Deal", href: "/deal" },
-  //   { title: "Contact", href: "/contact" },
 ];
+
 export const quickLinksData = [
   { title: "About us", href: "/about" },
   { title: "Contact us", href: "/contact" },
@@ -13,6 +13,7 @@ export const quickLinksData = [
   { title: "FAQs", href: "/faqs" },
   { title: "Help", href: "/help" },
 ];
+
 export const categoriesData = [
   { title: "Mobiles", href: "mobiles" },
   { title: "Appliances", href: "appliances" },

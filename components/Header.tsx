@@ -13,6 +13,7 @@ import MobileMenu from "@/components/MobileMenu";
 import SearchBar from "@/components/SearchBar";
 import { ClerkLoaded, SignedIn, UserButton } from "@clerk/nextjs";
 import { auth, currentUser } from "@clerk/nextjs/server";
+import { getMyOrders } from "@/sanity/queries";
 
 const Header = async () => {
   const user = await currentUser();
@@ -20,7 +21,7 @@ const Header = async () => {
   let orders = null;
 
   if (userId) {
-    orders = 10;
+    orders = await getMyOrders(userId);
   }
 
   return (
@@ -45,7 +46,7 @@ const Header = async () => {
             >
               <Logs className="size-6" />
               <span className="absolute -top-1 -right-1 bg-shop_btn_dark_green text-white size-4 rounded-full text-[10px] font-semibold flex items-center justify-center p-1">
-                {orders}
+                {orders?.length ? orders?.length : 0}
               </span>
             </Link>
           )}

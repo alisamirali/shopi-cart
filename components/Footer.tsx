@@ -10,7 +10,7 @@ import FooterTop from "@/components/FooterTop";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t">
+    <footer className="bg-white pt-10">
       <Container>
         <FooterTop />
 
@@ -70,10 +70,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="py-6 border-t text-center text-sm text-gray-600">
-          <div>
-            © {new Date().getFullYear()} <Logo className="text-sm" />. All
-            rights reserved.
-          </div>
+          <p>
+            © {new Date().getFullYear()} <b className="uppercase">ShopiCart</b>
+            . All rights reserved.
+          </p>
         </div>
       </Container>
     </footer>
