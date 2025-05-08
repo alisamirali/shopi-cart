@@ -16,7 +16,7 @@ const data: ContactItemData[] = [
   },
   {
     title: "Call Us",
-    subtitle: "+20 111 418 1442",
+    subtitle: "+20-111-418-1442",
     icon: (
       <Phone className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
     ),
@@ -39,11 +39,11 @@ const data: ContactItemData[] = [
 
 const FooterTop = () => {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 border-y">
+    <div className="flex items-start md:items-center flex-col md:flex-row md:gap-8 gap-3 border-y">
       {data?.map((item, index) => (
         <div
           key={index}
-          className="flex items-center gap-3 group hover:bg-gray-50 p-4 transition-colors hoverEffect"
+          className="flex items-center gap-3 group hover:bg-gray-50 p-2 md:p-4 transition-colors hoverEffect w-full"
         >
           {item?.icon}
           <div>
