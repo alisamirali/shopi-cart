@@ -16,12 +16,11 @@ export const quickLinksData = [
 
 export const categoriesData = [
   { title: "Mobiles", href: "mobiles" },
-  { title: "Appliances", href: "appliances" },
-  { title: "Smartphones", href: "smartphones" },
-  { title: "Air Conditioners", href: "air-conditioners" },
-  { title: "Washing Machine", href: "washing-machine" },
+  { title: "Smart Watches", href: "smart-watches" },
+  { title: "Washing Machines", href: "washing-machines" },
   { title: "Kitchen Appliances", href: "kitchen-appliances" },
-  { title: "gadget accessories", href: "gadget-accessories" },
+  { title: "Airbuds", href: "airbuds" },
+  { title: "Refrigerators", href: "refrigerators" },
 ];
 export const productType = [
   { title: "Gadget", value: "gadget" },

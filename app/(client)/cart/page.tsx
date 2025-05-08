@@ -4,6 +4,7 @@ import Container from "@/components/Container";
 import EmptyCart from "@/components/EmptyCart";
 import NoAccess from "@/components/NoAccess";
 import PriceFormatter from "@/components/PriceFormatter";
+import ProductSideMenu from "@/components/ProductSideMenu";
 import QuantityButtons from "@/components/QuantityButtons";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -154,11 +155,10 @@ const CartPage = () => {
                                 <TooltipProvider>
                                   <Tooltip>
                                     <TooltipTrigger>
-                                      {/* <ProductSideMenu
+                                      <ProductSideMenu
                                         product={product}
                                         className="relative top-0 right-0"
-                                      /> */}
-                                      ProductSideMenu
+                                      />
                                     </TooltipTrigger>
                                     <TooltipContent className="font-bold">
                                       Add to Favorite
@@ -176,7 +176,7 @@ const CartPage = () => {
                                         className="w-4 h-4 md:w-5 md:h-5 mr-1 text-gray-500 hover:text-red-600 hoverEffect"
                                       />
                                     </TooltipTrigger>
-                                    <TooltipContent className="font-bold bg-red-600">
+                                    <TooltipContent className="font-bold">
                                       Delete product
                                     </TooltipContent>
                                   </Tooltip>

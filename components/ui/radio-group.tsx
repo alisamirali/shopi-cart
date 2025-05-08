@@ -36,7 +36,7 @@ function RadioGroupItem({
         data-slot="radio-group-indicator"
         className="relative flex items-center justify-center"
       >
-        <Check className="h-3.5 w-3.5 fill-shop_dark_green text-shop_dark_green" />
+        <Check className="size-3 text-shop_dark_green" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   );
