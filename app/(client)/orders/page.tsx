@@ -13,6 +13,7 @@ import React from "react";
 
 const OrdersPage = async () => {
   const { userId } = await auth();
+
   if (!userId) {
     return redirect("/");
   }
