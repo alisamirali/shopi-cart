@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { getAllBrands } from "@/sanity/queries";
-import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
-import { GitCompareArrows, Headset, ShieldCheck, Truck } from "lucide-react";
 import { Title } from "@/components/ui/text";
+import { urlFor } from "@/sanity/lib/image";
+import { getAllBrands } from "@/sanity/queries";
+import { GitCompareArrows, Headset, ShieldCheck, Truck } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const extraData = [
   {
@@ -30,6 +30,7 @@ const extraData = [
 
 const ShopByBrands = async () => {
   const brands = await getAllBrands();
+
   return (
     <div className="mb-10 lg:mb-20 bg-shop_light_bg p-5 lg:p-7 rounded-md">
       <div className="flex items-start md:items-center gap-5 justify-between md:mb-8 mb-5 flex-col md:flex-row">

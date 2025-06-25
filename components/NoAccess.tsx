@@ -1,13 +1,13 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-import Logo from "./Logo";
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import Logo from "./Logo";
 import { Button } from "./ui/button";
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "./ui/card";
 
 const NoAccess = ({
   details = "Log in to view your cart items and checkout. Don't miss out on your favorite products!",

@@ -33,6 +33,7 @@ const ProductSideMenu = ({
       });
     }
   };
+
   return (
     <div
       className={cn("absolute top-2 right-2 hover:cursor-pointer", className)}

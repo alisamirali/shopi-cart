@@ -34,6 +34,7 @@ const FavoriteButton = ({
       });
     }
   };
+
   return (
     <>
       {!showProduct ? (

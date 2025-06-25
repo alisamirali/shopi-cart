@@ -1,6 +1,12 @@
 "use client";
 
+import OrderDetailDialog from "@/components/OrderDetailDialog";
 import { MY_ORDERS_QUERYResult } from "@/sanity.types";
+import { format } from "date-fns";
+import { X } from "lucide-react";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import PriceFormatter from "./PriceFormatter";
 import { TableBody, TableCell, TableRow } from "./ui/table";
 import {
   Tooltip,
@@ -8,12 +14,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-import PriceFormatter from "./PriceFormatter";
-import { format } from "date-fns";
-import { X } from "lucide-react";
-import { useState } from "react";
-import toast from "react-hot-toast";
-import OrderDetailDialog from "@/components/OrderDetailDialog";
 
 const OrdersComponent = ({ orders }: { orders: MY_ORDERS_QUERYResult }) => {
   const [selectedOrder, setSelectedOrder] = useState<
@@ -22,6 +22,7 @@ const OrdersComponent = ({ orders }: { orders: MY_ORDERS_QUERYResult }) => {
   const handleDelete = () => {
     toast.error("Delete method applied for Admin");
   };
+
   return (
     <>
       <TableBody>

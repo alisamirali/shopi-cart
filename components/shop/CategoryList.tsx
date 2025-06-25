@@ -1,8 +1,8 @@
 import { Category } from "@/sanity.types";
 
-import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
-import { Label } from "../ui/label";
 import { Title } from "@/components/ui/text";
+import { Label } from "../ui/label";
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 
 type CategoryListProps = {
   categories: Category[];

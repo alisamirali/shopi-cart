@@ -2,13 +2,13 @@
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 
-import Link from "next/link";
-import { StarIcon } from "@sanity/icons";
-import { Flame } from "lucide-react";
+import AddToCartButton from "@/components/AddToCartButton";
 import PriceView from "@/components/PriceView";
 import ProductSideMenu from "@/components/ProductSideMenu";
-import AddToCartButton from "@/components/AddToCartButton";
 import { Title } from "@/components/ui/text";
+import { StarIcon } from "@sanity/icons";
+import { Flame } from "lucide-react";
+import Link from "next/link";
 
 const ProductCard = ({ product }: { product: any }) => {
   return (

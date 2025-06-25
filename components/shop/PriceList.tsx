@@ -1,14 +1,7 @@
-import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
-import { Label } from "../ui/label";
 import { Title } from "@/components/ui/text";
-
-const priceArray = [
-  { title: "Under $100", value: "0-100" },
-  { title: "$100 - $200", value: "100-200" },
-  { title: "$200 - $300", value: "200-300" },
-  { title: "$300 - $500", value: "300-500" },
-  { title: "Over $500", value: "500-10000" },
-];
+import { priceArray } from "@/constants/data";
+import { Label } from "../ui/label";
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 
 type PriceListProps = {
   selectedPrice?: string | null;

@@ -1,12 +1,12 @@
+import FooterTop from "@/components/FooterTop";
+import { categoriesData, quickLinksData } from "@/constants/data";
+import Link from "next/link";
 import Container from "./Container";
 import Logo from "./Logo";
 import SocialMedia from "./SocialMedia";
-import { SubText, SubTitle } from "./ui/text";
-import { categoriesData, quickLinksData } from "@/constants/data";
-import Link from "next/link";
-import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import FooterTop from "@/components/FooterTop";
+import { Input } from "./ui/input";
+import { SubText, SubTitle } from "./ui/text";
 
 const Footer = () => {
   return (

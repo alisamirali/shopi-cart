@@ -1,13 +1,13 @@
 "use client";
-import { Category, Product } from "@/sanity.types";
-import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import { Button } from "./ui/button";
-import { client } from "@/sanity/lib/client";
-import { AnimatePresence, motion } from "motion/react";
-import { Loader2 } from "lucide-react";
-import ProductCard from "@/components/ProductCard";
 import NoProductAvailable from "@/components/NoProductAvailable";
+import ProductCard from "@/components/ProductCard";
+import { Category, Product } from "@/sanity.types";
+import { client } from "@/sanity/lib/client";
+import { Loader2 } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 interface Props {
   categories: Category[];
   slug: string;
@@ -42,7 +42,7 @@ const CategoryProducts = ({ categories, slug }: Props) => {
   };
   useEffect(() => {
     fetchProducts(currentSlug);
-  }, [router]);
+  }, [router, currentSlug]);
 
   return (
     <div className="py-5 flex flex-col md:flex-row items-start gap-5">

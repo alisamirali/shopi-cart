@@ -1,13 +1,14 @@
-import { getLatestBlogs } from "@/sanity/queries";
-import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
-import Link from "next/link";
-import { Calendar } from "lucide-react";
-import dayjs from "dayjs";
 import { Title } from "@/components/ui/text";
+import { urlFor } from "@/sanity/lib/image";
+import { getLatestBlogs } from "@/sanity/queries";
+import dayjs from "dayjs";
+import { Calendar } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const LatestBlog = async () => {
   const blogs = await getLatestBlogs();
+
   return (
     <div className="mb-10 lg:mb-20">
       <Title>Latest Blogs</Title>

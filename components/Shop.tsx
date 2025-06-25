@@ -1,16 +1,16 @@
 "use client";
+import { Title } from "@/components/ui/text";
 import { BRANDS_QUERYResult, Category, Product } from "@/sanity.types";
-import React, { useEffect, useState } from "react";
-import Container from "./Container";
-import CategoryList from "./shop/CategoryList";
-import { useSearchParams } from "next/navigation";
-import BrandList from "./shop/BrandList";
-import PriceList from "./shop/PriceList";
 import { client } from "@/sanity/lib/client";
 import { Loader2 } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import Container from "./Container";
 import NoProductAvailable from "./NoProductAvailable";
 import ProductCard from "./ProductCard";
-import { Title } from "@/components/ui/text";
+import BrandList from "./shop/BrandList";
+import CategoryList from "./shop/CategoryList";
+import PriceList from "./shop/PriceList";
 
 interface Props {
   categories: Category[];

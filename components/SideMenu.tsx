@@ -1,13 +1,13 @@
 "use client";
 
-import Logo from "./Logo";
-import { X } from "lucide-react";
 import { headerData } from "@/constants/data";
+import { useOutsideClick } from "@/hooks";
+import { X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import SocialMedia from "./SocialMedia";
-import { useOutsideClick } from "@/hooks";
 import { useEffect } from "react";
+import Logo from "./Logo";
+import SocialMedia from "./SocialMedia";
 
 type SideMenuProps = {
   isOpen: boolean;

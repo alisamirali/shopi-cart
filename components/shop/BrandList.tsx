@@ -1,8 +1,8 @@
 import { BRANDS_QUERYResult } from "@/sanity.types";
 
-import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
-import { Label } from "../ui/label";
 import { Title } from "@/components/ui/text";
+import { Label } from "../ui/label";
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 
 type BrandListProps = {
   brands: BRANDS_QUERYResult;

@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
-import { Title } from "@/components/ui/text";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Title } from "@/components/ui/text";
 import { Building2, Heart, ShieldCheck, Users2 } from "lucide-react";
 
 const AboutPage = () => {

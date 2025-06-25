@@ -1,17 +1,17 @@
 "use client";
 
-import useStore from "@/store";
-import { useState } from "react";
-import Container from "./Container";
-import { Heart, X } from "lucide-react";
-import { Button } from "./ui/button";
-import Link from "next/link";
 import { Product } from "@/sanity.types";
-import toast from "react-hot-toast";
-import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-import PriceFormatter from "./PriceFormatter";
+import useStore from "@/store";
+import { Heart, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import toast from "react-hot-toast";
 import AddToCartButton from "./AddToCartButton";
+import Container from "./Container";
+import PriceFormatter from "./PriceFormatter";
+import { Button } from "./ui/button";
 
 const WishListProducts = () => {
   const [visibleProducts, setVisibleProducts] = useState(7);

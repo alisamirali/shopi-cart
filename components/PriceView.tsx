@@ -1,5 +1,5 @@
-import { twMerge } from "tailwind-merge";
 import { cn } from "@/lib/utils";
+import { twMerge } from "tailwind-merge";
 import PriceFormatter from "./PriceFormatter";
 
 interface Props {

@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
-import Link from "next/link";
 import { Title } from "@/components/ui/text";
 import { Category } from "@/sanity.types";
+import { urlFor } from "@/sanity/lib/image";
+import Image from "next/image";
+import Link from "next/link";
 
 const HomeCategories = ({ categories }: { categories: Category[] }) => {
   return (

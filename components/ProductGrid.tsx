@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import ProductCard from "./ProductCard";
-import { motion, AnimatePresence } from "motion/react";
-import { client } from "@/sanity/lib/client";
-import NoProductAvailable from "./NoProductAvailable";
-import { Loader2 } from "lucide-react";
-import Container from "./Container";
+import HomeTabbar from "@/components/HomeTabbar";
 import { productType } from "@/constants/data";
 import { Product } from "@/sanity.types";
-import HomeTabbar from "@/components/HomeTabbar";
+import { client } from "@/sanity/lib/client";
+import { Loader2 } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useState } from "react";
+import Container from "./Container";
+import NoProductAvailable from "./NoProductAvailable";
+import ProductCard from "./ProductCard";
 
 const ProductGrid = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -33,7 +33,7 @@ const ProductGrid = () => {
       }
     };
     fetchData();
-  }, [selectedTab]);
+  }, [selectedTab, query, params]);
 
   return (
     <Container className="flex flex-col lg:px-0 my-10">

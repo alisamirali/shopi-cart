@@ -1,18 +1,20 @@
 import { Facebook, Linkedin, Youtube } from "lucide-react";
 
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
+
 type SocialMediaProps = {
   className?: string;
   iconClassName?: string;
   tooltipClassName?: string;
 };
+
 const socialLink = [
   {
     title: "Youtube",
